@@ -29,16 +29,16 @@
          onmouseenter="this.style.borderColor='rgba(61,205,88,0.5)';this.style.transform='translateY(-6px)';this.style.boxShadow='0 30px 60px rgba(0,0,0,0.5)'"
          onmouseleave="this.style.borderColor='var(--steel)';this.style.transform='none';this.style.boxShadow='none'">
       {{-- Card Top --}}
-      <div style="padding:0 0 0;background:linear-gradient(135deg,rgba(61,205,88,0.08),rgba(61,205,88,0.02));border-bottom:1px solid var(--steel);text-align:center;">
-        <img src="/images/harsh_profile.png" alt="Harsh Chauhan - Backend Developer" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;">
-        <div style="padding:24px 36px 20px;">
+      <div style="padding:40px 36px 32px;background:linear-gradient(135deg,rgba(61,205,88,0.08),rgba(61,205,88,0.02));border-bottom:1px solid var(--steel);text-align:center;">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#3DCD58,#1a7a30);display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 20px;box-shadow:0 0 40px rgba(61,205,88,0.3);border:3px solid rgba(61,205,88,0.4)">
+          💻
+        </div>
         <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">Harsh Chauhan</h2>
         <div style="font-family:var(--font-mono);font-size:11px;color:var(--green-se);letter-spacing:2px;text-transform:uppercase">Backend Developer</div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
           @foreach(['PHP / Laravel', 'MySQL', 'REST APIs', 'Redis', 'Docker'] as $tech)
             <span style="font-size:10px;padding:3px 10px;border-radius:20px;background:rgba(61,205,88,0.1);border:1px solid rgba(61,205,88,0.25);color:var(--green-se);font-family:var(--font-mono)">{{ $tech }}</span>
           @endforeach
-        </div>
         </div>
       </div>
       {{-- Card Body --}}
@@ -81,16 +81,16 @@
          onmouseenter="this.style.borderColor='rgba(61,205,88,0.5)';this.style.transform='translateY(-6px)';this.style.boxShadow='0 30px 60px rgba(0,0,0,0.5)'"
          onmouseleave="this.style.borderColor='var(--steel)';this.style.transform='none';this.style.boxShadow='none'">
       {{-- Card Top --}}
-      <div style="padding:0 0 0;background:linear-gradient(135deg,rgba(255,107,0,0.08),rgba(255,107,0,0.02));border-bottom:1px solid var(--steel);text-align:center;">
-        <img src="/images/tejaswi_profile.png" alt="Tejaswi Yadav - Frontend Developer" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;">
-        <div style="padding:24px 36px 20px;">
+      <div style="padding:40px 36px 32px;background:linear-gradient(135deg,rgba(255,107,0,0.08),rgba(255,107,0,0.02));border-bottom:1px solid var(--steel);text-align:center;">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#FF6B00,#cc5500);display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 20px;box-shadow:0 0 40px rgba(255,107,0,0.3);border:3px solid rgba(255,107,0,0.4)">
+          🎨
+        </div>
         <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">Tejaswi Yadav</h2>
         <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase">Frontend Developer</div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
           @foreach(['HTML / CSS', 'JavaScript', 'Blade Templates', 'Leaflet.js', 'UI/UX'] as $tech)
             <span style="font-size:10px;padding:3px 10px;border-radius:20px;background:rgba(255,107,0,0.1);border:1px solid rgba(255,107,0,0.25);color:var(--orange);font-family:var(--font-mono)">{{ $tech }}</span>
           @endforeach
-        </div>
         </div>
       </div>
       {{-- Card Body --}}
