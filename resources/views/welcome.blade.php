@@ -93,13 +93,18 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(255,107,0,0.05) 0%, transparent 50%);
+    background-image: url('/images/hero_logistics_bg.png');
+    background-size: cover; background-position: center;
+  }
+  .hero-bg-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(10,10,10,0.93) 0%, rgba(10,10,10,0.75) 55%, rgba(10,10,10,0.4) 100%),
+                radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.08) 0%, transparent 60%);
   }
   .grid-overlay {
     position: absolute; inset: 0; pointer-events: none;
-    background-image: linear-gradient(rgba(255,107,0,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,107,0,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255,107,0,0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,107,0,0.02) 1px, transparent 1px);
     background-size: 60px 60px;
   }
   .hero-content {
@@ -533,35 +538,35 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
+  <div class="hero-bg-overlay"></div>
   <div class="grid-overlay"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-eyebrow">🇮🇳 India's #1 Industrial Freight Network</div>
+      <div class="hero-eyebrow">Trusted across India's industrial corridors</div>
       <h1 class="hero-title">
-        MOVE<br>
-        HEAVY.<br>
-        MOVE <span class="accent">FAST.</span>
+        Move Heavy.<br>
+        Move <span class="accent">Fast.</span>
       </h1>
       <p class="hero-subtitle">
-        On-demand heavy freight across India — Mumbai to Delhi, Pune to Chennai, Kolkata to Hyderabad.
-        Instant dispatch, live GPS tracking, certified CDL drivers, and GST-compliant billing.
+        We connect factories, warehouses, and ports across India with certified drivers who show up on time, every time. 
+        From a single pallet to an oversized ODC load — we handle it.
       </p>
       <div class="hero-cta">
-        <button class="btn-large btn-orange-large" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">🚛 Book a Haul</button>
-        <button class="btn-large btn-outline-large" onclick="document.getElementById('tracking').scrollIntoView({behavior:'smooth'})">📍 Live Track</button>
+        <button class="btn-large btn-orange-large" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book a Haul</button>
+        <button class="btn-large btn-outline-large" onclick="document.getElementById('tracking').scrollIntoView({behavior:'smooth'})">Track Live</button>
       </div>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num" id="counterDrivers">0</span>
-          <span class="stat-label">Drivers Pan-India</span>
+          <span class="stat-label">Certified drivers</span>
         </div>
         <div class="stat">
           <span class="stat-num" id="counterLoads">0</span>
-          <span class="stat-label">Loads Delivered</span>
+          <span class="stat-label">Loads delivered</span>
         </div>
         <div class="stat">
           <span class="stat-num" id="counterRating">0</span>
-          <span class="stat-label">Avg Rating</span>
+          <span class="stat-label">Customer rating</span>
         </div>
       </div>
     </div>
@@ -612,8 +617,8 @@
 <section id="booking">
   <div style="max-width:1200px;margin:0 auto;padding:80px 0">
     <div class="section-label">On-Demand Dispatch</div>
-    <h2 class="section-title reveal">BOOK YOUR HAUL</h2>
-    <p class="section-sub reveal">Industrial freight, scheduled or instant. Configure your load and get matched with a certified driver in minutes.</p>
+    <h2 class="section-title reveal">Book Your Haul</h2>
+    <p class="section-sub reveal">Industrial freight, scheduled or instant. Tell us what you need and we'll match you with a certified driver — usually in under 5 minutes.</p>
     <div class="booking-grid reveal">
       <!-- Form -->
       <form action="{{ route('bookings.store') }}" method="POST" class="booking-form">
@@ -715,8 +720,8 @@
 <section id="tracking">
   <div class="tracking-inner">
     <div class="section-label">Real-Time Intelligence</div>
-    <h2 class="section-title reveal">LIVE FLEET TRACKER</h2>
-    <p class="section-sub reveal">Watch your shipments move in real time. Every truck, every mile, every minute — fully visible.</p>
+    <h2 class="section-title reveal">Live Fleet Tracker</h2>
+    <p class="section-sub reveal">Know exactly where your shipment is, at any moment. Every truck, every route — streamed live so you're never left guessing.</p>
     <div id="liveTrackMap"></div>
     <div class="tracking-stats reveal">
       <div class="t-stat">
@@ -750,23 +755,23 @@
 <!-- SERVICES -->
 <section id="services">
   <div class="section-label">What We Haul</div>
-  <h2 class="section-title reveal">INDUSTRIAL SERVICES</h2>
-  <p class="section-sub reveal">Specialized solutions engineered for the Schneider industrial ecosystem.</p>
+  <h2 class="section-title reveal">Our Services</h2>
+  <p class="section-sub reveal">From heavy machinery to hazardous cargo, we have the specialised equipment and expertise to get it there safely.</p>
   <div class="services-grid reveal">
     <div class="service-card">
       <div class="service-icon-wrap">🏗️</div>
-      <div class="service-title">HEAVY HAUL</div>
-      <div class="service-desc">Oversized and overweight cargo transport with permitted routes, escort vehicles, and specialized rigging — up to 200,000 lbs.</div>
+      <div class="service-title">Heavy Haul</div>
+      <div class="service-desc">Oversized and overweight cargo transport with permitted routes, escort vehicles, and specialized rigging — built for loads no one else will touch.</div>
       <div class="service-tags">
         <span class="tag">Permitted</span>
         <span class="tag">Escorted</span>
-        <span class="tag">80k+ lbs</span>
+        <span class="tag">ODC Ready</span>
       </div>
     </div>
     <div class="service-card">
       <div class="service-icon-wrap">⚗️</div>
-      <div class="service-title">HAZMAT FREIGHT</div>
-      <div class="service-desc">DOT-certified hazardous material transport with full compliance documentation, safety protocols, and certified HAZMAT drivers.</div>
+      <div class="service-title">Hazmat Freight</div>
+      <div class="service-desc">Fully compliant hazardous material transport handled by certified drivers with the right training, documentation, and equipment.</div>
       <div class="service-tags">
         <span class="tag">DOT Compliant</span>
         <span class="tag">All Classes</span>
@@ -775,8 +780,8 @@
     </div>
     <div class="service-card">
       <div class="service-icon-wrap">🏭</div>
-      <div class="service-title">PLANT-TO-PLANT</div>
-      <div class="service-desc">Dedicated shuttles between Schneider manufacturing facilities. Synchronized scheduling with your production calendar.</div>
+      <div class="service-title">Plant-to-Plant</div>
+      <div class="service-desc">Dedicated shuttles that sync with your production calendar — so your supply chain never has to wait on freight.</div>
       <div class="service-tags">
         <span class="tag">Scheduled</span>
         <span class="tag">Dedicated</span>
@@ -785,8 +790,8 @@
     </div>
     <div class="service-card">
       <div class="service-icon-wrap">⚡</div>
-      <div class="service-title">EMERGENCY DISPATCH</div>
-      <div class="service-desc">24/7 instant dispatch for production-critical freight. Driver on site within 30 minutes, anywhere in our service radius.</div>
+      <div class="service-title">Emergency Dispatch</div>
+      <div class="service-desc">Production stopped? We dispatch around the clock. A driver is on site within 30 minutes, no matter where you are in our network.</div>
       <div class="service-tags">
         <span class="tag">24/7</span>
         <span class="tag">30 min SLA</span>
@@ -795,8 +800,8 @@
     </div>
     <div class="service-card">
       <div class="service-icon-wrap">🔩</div>
-      <div class="service-title">MACHINERY MOVING</div>
-      <div class="service-desc">CNC machines, presses, turbines, and industrial equipment moved with precision rigging, cranes, and white-glove handling.</div>
+      <div class="service-title">Machinery Moving</div>
+      <div class="service-desc">CNC machines, presses, turbines — moved with precision rigging, cranes, and the kind of care heavy equipment deserves.</div>
       <div class="service-tags">
         <span class="tag">Rigging</span>
         <span class="tag">Crane Ready</span>
@@ -805,12 +810,12 @@
     </div>
     <div class="service-card">
       <div class="service-icon-wrap">📊</div>
-      <div class="service-title">SUPPLY CHAIN ANALYTICS</div>
-      <div class="service-desc">AI-powered dashboards tracking fleet efficiency, route optimization, and delivery performance with live reporting.</div>
+      <div class="service-title">Supply Chain Analytics</div>
+      <div class="service-desc">Live dashboards that show you fleet efficiency, route performance, and delivery trends — so you can make better decisions faster.</div>
       <div class="service-tags">
-        <span class="tag">AI-Powered</span>
         <span class="tag">Live Reports</span>
         <span class="tag">API Access</span>
+        <span class="tag">Export Ready</span>
       </div>
     </div>
   </div>
@@ -820,8 +825,8 @@
 <section id="fleet">
   <div class="fleet-inner">
     <div class="section-label">Our Vehicles</div>
-    <h2 class="section-title reveal">THE FLEET</h2>
-    <p class="section-sub reveal">From standard dry vans to specialized heavy haulers — we have the right vehicle for every load.</p>
+    <h2 class="section-title reveal">The Fleet</h2>
+    <p class="section-sub reveal">From standard dry vans to multi-axle heavy haulers, we have the right vehicle waiting for your load right now.</p>
     <div class="fleet-grid reveal">
       <div class="fleet-card" onclick="showToast('🚛','Semi Truck selected — checking availability...')">
         <span class="fleet-emoji">🚛</span>
@@ -860,74 +865,67 @@
   <div class="section-label">For Drivers</div>
   <div class="driver-layout reveal">
     <div>
-      <h2 class="section-title">DRIVE THE<br><span style="color:var(--orange)">SCHNEIDER<br>NETWORK</span></h2>
+      <h2 class="section-title">Drive with<br><span style="color:var(--orange)">Schneider.<br>Earn More.</span></h2>
       <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-top:16px;">
-        Join the most reliable industrial freight network. Set your own schedule, choose your loads, 
-        and earn top-of-market rates with instant weekly payouts.
+        Our drivers are the backbone of everything we do. Set your schedule, pick the loads that work for you, 
+        and get paid fast — with support available every hour of the day.
       </p>
       <div class="driver-metrics">
         <div class="metric-box">
           <div class="metric-val">₹1,80,000</div>
-          <div class="metric-label">Avg Weekly Earnings</div>
+          <div class="metric-label">Avg. weekly earnings</div>
         </div>
         <div class="metric-box">
           <div class="metric-val">4.2 min</div>
-          <div class="metric-label">Avg. Load Match Time</div>
+          <div class="metric-label">Average load match time</div>
         </div>
         <div class="metric-box">
           <div class="metric-val">100%</div>
-          <div class="metric-label">Instant Pay Available</div>
+          <div class="metric-label">Instant pay available</div>
         </div>
         <div class="metric-box">
           <div class="metric-val">24/7</div>
-          <div class="metric-label">Driver Support</div>
+          <div class="metric-label">Driver support line</div>
         </div>
       </div>
       <div class="driver-cta-wrap">
         <button class="btn-large btn-orange-large" onclick="showToast('🚛','Driver onboarding portal opening...')">Apply to Drive</button>
-        <button class="btn-large btn-outline-large" onclick="showToast('📱','App download link sent to your phone!')">Download App</button>
+        <button class="btn-large btn-outline-large" onclick="showToast('📱','App download link sent to your phone!')">Download the App</button>
       </div>
     </div>
-    <div class="driver-visual">
-      <div class="dv-header">
-        🚛 Driver Dashboard
-        <div class="status-toggle">
-          <span>Online</span>
-          <div class="toggle-sw"></div>
+    <div class="driver-visual" style="padding:0;overflow:hidden;position:relative;">
+      <img src="/images/driver_photo.png" alt="Schneider driver standing by his truck at a freight terminal" style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+      <div style="padding:22px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div class="dv-header" style="font-size:15px;">
+          Driver Dashboard
+          <div class="status-toggle">
+            <span>Online</span>
+            <div class="toggle-sw"></div>
+          </div>
         </div>
-      </div>
-      <div class="job-item">
-        <div class="job-icon">📦</div>
-        <div class="job-details">
-          <div class="job-title">Steel Coils — 12,000 kg</div>
-          <div class="job-meta">Mumbai JNPT → Chakan, Pune · 149 km · Flatbed Required</div>
+        <div class="job-item">
+          <div class="job-details">
+            <div class="job-title">Steel Coils — 12,000 kg</div>
+            <div class="job-meta">Mumbai JNPT → Chakan, Pune · 149 km · Flatbed</div>
+          </div>
+          <div class="job-price">₹18,500</div>
         </div>
-        <div class="job-price">₹18,500</div>
-      </div>
-      <div class="job-item" style="border-color:rgba(255,107,0,0.3)">
-        <div class="job-icon">⚡</div>
-        <div class="job-details">
-          <div class="job-title">URGENT: Machinery Parts — 4,200 kg</div>
-          <div class="job-meta">Ahmedabad → Surat · 288 km · Semi OK</div>
+        <div class="job-item" style="border-color:rgba(255,107,0,0.3)">
+          <div class="job-details">
+            <div class="job-title">Urgent: Machinery Parts — 4,200 kg</div>
+            <div class="job-meta">Ahmedabad → Surat · 288 km · Semi</div>
+          </div>
+          <div class="job-price" style="color:var(--yellow)">₹15,200</div>
         </div>
-        <div class="job-price" style="color:var(--yellow)">₹15,200</div>
-      </div>
-      <div class="job-item">
-        <div class="job-icon">🏗️</div>
-        <div class="job-details">
-          <div class="job-title">Construction Equipment — 18,000 kg</div>
-          <div class="job-meta">Hyderabad → Bengaluru · 570 km · Heavy Haul</div>
-        </div>
-        <div class="job-price">₹28,400</div>
-      </div>
-      <div style="display:flex;gap:10px;margin-top:6px">
-        <div style="flex:1;background:var(--dark3);border-radius:10px;padding:14px;text-align:center">
-          <div style="font-family:var(--font-mono);color:var(--orange);font-size:18px">₹74,500</div>
-          <div style="font-size:11px;color:var(--gray);margin-top:4px">Today's Earnings</div>
-        </div>
-        <div style="flex:1;background:var(--dark3);border-radius:10px;padding:14px;text-align:center">
-          <div style="font-family:var(--font-mono);color:var(--green);font-size:18px">★ 4.98</div>
-          <div style="font-size:11px;color:var(--gray);margin-top:4px">Your Rating</div>
+        <div style="display:flex;gap:10px;">
+          <div style="flex:1;background:var(--dark3);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-family:var(--font-mono);color:var(--orange);font-size:18px">₹74,500</div>
+            <div style="font-size:11px;color:var(--gray);margin-top:4px">Today's earnings</div>
+          </div>
+          <div style="flex:1;background:var(--dark3);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-family:var(--font-mono);color:var(--green);font-size:18px">★ 4.98</div>
+            <div style="font-size:11px;color:var(--gray);margin-top:4px">Your rating</div>
+          </div>
         </div>
       </div>
     </div>
@@ -937,8 +935,8 @@
 <!-- ───── CITIES SECTION ─────────────────────────────────────────────────── -->
 <section id="cities" style="padding:80px 28px;max-width:1200px;margin:0 auto">
   <div class="section-label">Pan-India Coverage</div>
-  <h2 class="section-title reveal">500+ CITIES COVERED</h2>
-  <p class="section-sub reveal">From the metros to tier-2 industrial hubs — our fleet is ready across every major Indian city and state.</p>
+  <h2 class="section-title reveal">500+ Cities Covered</h2>
+  <p class="section-sub reveal">From the metros to tier-2 industrial hubs — our fleet is on the ground and ready across every corner of India.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:36px" class="reveal">
     @foreach([
       ['Mumbai','MH','🏳️'],['Delhi NCR','DL','🏹'],['Bengaluru','KA','💻'],['Chennai','TN','⛓️'],

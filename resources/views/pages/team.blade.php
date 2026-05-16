@@ -9,13 +9,12 @@
 {{-- HERO --}}
 <section style="padding:80px 28px 60px;border-bottom:1px solid var(--steel);position:relative;overflow:hidden;">
   <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2;text-align:center;">
-    <div class="hero-badge reveal">👨‍💻 The Builders</div>
+    <div class="hero-badge reveal">The People Behind the Platform</div>
     <h1 class="section-title reveal" style="font-size:clamp(48px,6vw,84px)">
-      THE TEAM BEHIND<br><span style="color:var(--green-se)">SCHNEIDER ELECTRIC</span>
+      Meet the Team<br><span style="color:var(--green-se)">Building Schneider Electric</span>
     </h1>
     <p style="font-size:17px;color:var(--gray);max-width:600px;line-height:1.8;margin:20px auto 0" class="reveal">
-      A small, high-impact engineering team that built India's most advanced industrial freight platform from scratch.
-      Passionate engineers. Relentless builders.
+      Two engineers who believed logistics could be better. They built it themselves — and they're not done yet.
     </p>
   </div>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%, rgba(61,205,88,0.06) 0%, transparent 60%);pointer-events:none;"></div>
@@ -30,24 +29,23 @@
          onmouseenter="this.style.borderColor='rgba(61,205,88,0.5)';this.style.transform='translateY(-6px)';this.style.boxShadow='0 30px 60px rgba(0,0,0,0.5)'"
          onmouseleave="this.style.borderColor='var(--steel)';this.style.transform='none';this.style.boxShadow='none'">
       {{-- Card Top --}}
-      <div style="padding:40px 36px 32px;background:linear-gradient(135deg,rgba(61,205,88,0.08),rgba(61,205,88,0.02));border-bottom:1px solid var(--steel);text-align:center;">
-        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#3DCD58,#1a7a30);display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 20px;box-shadow:0 0 40px rgba(61,205,88,0.3);border:3px solid rgba(61,205,88,0.4)">
-          💻
-        </div>
-        <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">HARSH CHAUHAN</h2>
+      <div style="padding:0 0 0;background:linear-gradient(135deg,rgba(61,205,88,0.08),rgba(61,205,88,0.02));border-bottom:1px solid var(--steel);text-align:center;">
+        <img src="/images/harsh_profile.png" alt="Harsh Chauhan - Backend Developer" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;">
+        <div style="padding:24px 36px 20px;">
+        <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">Harsh Chauhan</h2>
         <div style="font-family:var(--font-mono);font-size:11px;color:var(--green-se);letter-spacing:2px;text-transform:uppercase">Backend Developer</div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
           @foreach(['PHP / Laravel', 'MySQL', 'REST APIs', 'Redis', 'Docker'] as $tech)
             <span style="font-size:10px;padding:3px 10px;border-radius:20px;background:rgba(61,205,88,0.1);border:1px solid rgba(61,205,88,0.25);color:var(--green-se);font-family:var(--font-mono)">{{ $tech }}</span>
           @endforeach
         </div>
+        </div>
       </div>
       {{-- Card Body --}}
       <div style="padding:28px 36px;">
         <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">
-          Harsh is the architectural backbone of Schneider Electric's logistics platform. With deep expertise in
-          Laravel and distributed systems, he designed and implemented the core booking engine, real-time dispatch
-          system, database schema, and all RESTful APIs that power the platform.
+          Harsh built the engine that keeps everything running. He designed the booking system, the dispatch logic,
+          the database architecture, and every API endpoint — writing the kind of code that just works, even under pressure.
         </p>
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
           @foreach([
@@ -83,24 +81,23 @@
          onmouseenter="this.style.borderColor='rgba(61,205,88,0.5)';this.style.transform='translateY(-6px)';this.style.boxShadow='0 30px 60px rgba(0,0,0,0.5)'"
          onmouseleave="this.style.borderColor='var(--steel)';this.style.transform='none';this.style.boxShadow='none'">
       {{-- Card Top --}}
-      <div style="padding:40px 36px 32px;background:linear-gradient(135deg,rgba(61,205,88,0.08),rgba(61,205,88,0.02));border-bottom:1px solid var(--steel);text-align:center;">
-        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#FF6B00,#cc5500);display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 20px;box-shadow:0 0 40px rgba(255,107,0,0.3);border:3px solid rgba(255,107,0,0.4)">
-          🎨
-        </div>
-        <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">TEJASWI YADAV</h2>
+      <div style="padding:0 0 0;background:linear-gradient(135deg,rgba(255,107,0,0.08),rgba(255,107,0,0.02));border-bottom:1px solid var(--steel);text-align:center;">
+        <img src="/images/tejaswi_profile.png" alt="Tejaswi Yadav - Frontend Developer" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;">
+        <div style="padding:24px 36px 20px;">
+        <h2 style="font-family:var(--font-display);font-size:34px;color:var(--white);letter-spacing:1px;margin-bottom:6px">Tejaswi Yadav</h2>
         <div style="font-family:var(--font-mono);font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase">Frontend Developer</div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap">
           @foreach(['HTML / CSS', 'JavaScript', 'Blade Templates', 'Leaflet.js', 'UI/UX'] as $tech)
             <span style="font-size:10px;padding:3px 10px;border-radius:20px;background:rgba(255,107,0,0.1);border:1px solid rgba(255,107,0,0.25);color:var(--orange);font-family:var(--font-mono)">{{ $tech }}</span>
           @endforeach
         </div>
+        </div>
       </div>
       {{-- Card Body --}}
       <div style="padding:28px 36px;">
         <p style="font-size:14px;color:var(--gray);line-height:1.8;margin-bottom:20px">
-          Tejaswi is the creative force behind every pixel of the Schneider Electric platform. She crafted the dark
-          industrial design system, the interactive live-tracking maps, and the immersive user experience that makes
-          complex freight operations feel intuitive and visually powerful.
+          Tejaswi turned raw functionality into something people actually enjoy using. From the dark industrial
+          design system to the live tracking maps, she made a complex freight platform feel simple and intuitive.
         </p>
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
           @foreach([
@@ -138,11 +135,10 @@
 <section style="padding:60px 28px 80px;background:var(--dark2);border-top:1px solid var(--steel);">
   <div style="max-width:800px;margin:0 auto;text-align:center" class="reveal">
     <div class="section-label">The Partnership</div>
-    <h2 class="section-title" style="font-size:clamp(32px,4vw,52px)">BACKEND + FRONTEND = SCHNEIDER ELECTRIC</h2>
+    <h2 class="section-title" style="font-size:clamp(32px,4vw,52px)">Backend + Frontend = Schneider Electric</h2>
     <p style="font-size:15px;color:var(--gray);line-height:1.8;margin:20px auto 40px;max-width:600px">
-      Harsh and Tejaswi built this platform as a unified team — with the backend's robustness meeting the frontend's
-      elegance to create a product that's both powerful and beautiful. Every API call, every animation, every database
-      query was crafted with the same obsession: making India's industrial freight effortless.
+      Harsh and Tejaswi didn't divide the work — they shared the vision. One built the foundation, 
+      the other made it shine. Together they created something neither could have done alone, and they're proud of it.
     </p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
       @foreach([
